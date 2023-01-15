@@ -82,7 +82,7 @@
 
 /* for cross */
 .board.x .cell:not(.circle):not(.x):hover {
-	background: "assets/rthan.png";
+	background: "assets/rs3.png";
 	background-size: 80% 80%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -90,7 +90,7 @@
 
 /* for cross (set) */
 .cell:not(.circle).x {
-    background-image: url("assets/rthan.png");
+    background-image: url("assets/rs3.png");
 	background-size: 80% 80%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -98,7 +98,7 @@
 
 /* for circle */
 .board.circle .cell:not(.circle):not(.x):hover {	
-	background-image: url("assets/jw2.png");
+	background-image: url("assets/jw3.jpeg");
     background-size: 80% 80%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -106,7 +106,7 @@
 
 /* for circle (set) */
 .cell:not(.x).circle {
-	background-image: url("assets/jw2.png");
+	background-image: url("assets/jw3.jpeg");
     background-size: 80% 80%;
 	background-repeat: no-repeat;
 	background-position: center;

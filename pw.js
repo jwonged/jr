@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+var countDownDate = new Date("Aug 5, 2023 10:30:27").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -16,18 +16,57 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Display the result in the element with id="demo"
+  // Display the countdown to wedding day!
   document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
 
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("countdown").innerHTML = "We're married!";
+    document.getElementById("countdown").innerHTML = "We're married! #SohWongSuckers";
   }
 }, 1000);
 
-//tic tac toe
+// Add event listener for the password button
+var input = document.getElementById("codeword");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("pwbutton").click();
+  }
+});
+
+// Check which part of wed they are invited for
+function checkPassword() {
+	var codeword = document.getElementById("codeword").value;
+	var result = document.getElementById("result");
+	if (codeword === "ironman" || codeword === "wedding" || codeword === "thanos") {
+	  document.getElementById("password-overlay").style.display = "none";
+	  setWedDetails(codeword);
+	} else {
+	  result.innerHTML = "Oh no. You're not recognized! Are you a panda?";
+	  document.getElementById("codeword").value = "";
+	}
+  }
+
+function setWedDetails(codeword) {
+	if (codeword === "ironman") {
+		// Invited to both
+		document.getElementById("wed-date").innerHTML = "5 & 6 August 2023";
+		document.getElementById("wed-date").innerHTML = "5 & 6 August 2023";
+		document.getElementById("wed-date").innerHTML = "5 & 6 August 2023";
+	} else if (codeword === "wedding") {
+		// Invited to banquet only
+		document.getElementById("wed-date").innerHTML = "6 August 2023";
+	} else if (codeword === "thanos") {
+		// Invited to church only
+		document.getElementById("wed-date").innerHTML = "5 August 2023";
+	}
+
+}
+
+
+//tic tac toe https://www.codebrainer.com/blog/tic-tac-toe-javascript-game
 const PLAYER_X_CLASS = 'x'
 const PLAYER_O_CLASS = 'circle'
 const WINNING_COMBINATIONS = [

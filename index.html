@@ -63,15 +63,23 @@ table {
 </head>
 <body>
 
-  <!--Stop trying to read my code. We don't have all day to make everything look nice here!-->
+<!--Yes, you can find out which password to use from here if you really want to. Stop trying to read my code. -->
+<div id="password-overlay" class="password-overlay">
+    <form>
+      <input type="codeword" id="codeword" name="codeword">
+      <button id="pwbutton" type="button" onclick="checkPassword()">Enter</button>
+    </form>
+  <p id="result"></p>
+</div>
+
 
 <!-- First JR banner -->
 <header class="w3-display-container w3-wide bgimg w3-grayscale-min padtop" id="home">
   <div class="overlay"></div>
   <div class="w3-display-middle w3-text-white w3-center">
-    <h1 class="w3-jumbo jrfont">Josha & Ruthaen</h1>
+    <h1 class="w3-jumbo jrfont">Joshua & Ruthanne</h1>
     <h2>You are invited!</h2>
-    <h2><b>5 August 2023</b></h2>
+    <h2 id="wed-date"><b>5 & 6 August 2023</b></h2>
     <!--<p class="w3-center"><a href="#wedding" class="w3-button w3-dark-grey w3-round w3-padding-large w3-large">RSVP</a></p>
     -->
     </div>
@@ -92,17 +100,17 @@ table {
 <div class="w3-container w3-padding-64 jr-sec-div-color" id="us"><!-- w3-grayscale-min-->
   <div class="w3-content">
     <h1 class="w3-center w3-text-grey"><b>J&R's Wedding</b></h1>
-    <p class="w3-center"><a href="#wedding" class="w3-button w3-black w3-round w3-padding-large w3-large">Wedding Details</a></p>
-
+    <!--<p class="w3-center"><a href="#wedding" class="w3-button w3-black w3-round w3-padding-large w3-large">Wedding Details</a></p>
+    -->
     <div class="w3-row">
       <div class="w3-half w3-center">
-        <h2>When</h2>
-        <p>Wedding Ceremony - Xpm</p>
-        <p>Reception & Dinner - Ypm</p>
+        <h2>Solemnization</h2>
+        <p id="when-line1">Solemnization – 1030am, 5 August 2023</p>
+        <p> Reception & Dinner - 7pm, 6 August 2023</p>
       </div>
       <div class="w3-half w3-center">
-        <h2>Where</h2>
-        <p>Somewhere, an address</p>
+        <h2>Wedding Dinner</h2>
+        <p id="">Somewhere, an address</p>
         <p>Somewhere, some address</p>
       </div>
     </div>
@@ -146,11 +154,19 @@ table {
   </div>
 </div>
 
+
 <!-- Countdown photo -->
 <div class="w3-display-container bgimg3">
   <div class="darker-overlay"></div>
   <div class="w3-display-middle w3-text-white w3-center">
     <h1 class="w3-jumbo">Save the date!</h1><br>
+    <p class="w3-xlarge">
+      <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">RSVP</button>
+  
+      <!-- smaller button leading to typeform
+        <p class="w3-center"><a href="https://m62atgq97h1.typeform.com/to/ssoKPCsQ" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">RSVP</a></p>
+      -->
+    </p>
   </div>
 </div>
 
@@ -175,13 +191,39 @@ table {
 </div>-->
 
 <!-- RSVP section -->
+<!--
 <div class="w3-container w3-padding-64 w3-pale-red w3-center w3-wide" id="rsvp">
   <h1>HOPE YOU CAN MAKE IT!</h1>
   <p class="w3-large">Kindly Respond By the end of the century</p>
   <p class="w3-xlarge">
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">RSVP</button>
+
     <p class="w3-center"><a href="https://m62atgq97h1.typeform.com/to/ssoKPCsQ" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">RSVP</a></p>
 
   </p>
+</div>-->
+
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:900px">
+    <div class="w3-container w3-white w3-center">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdrfhy0iPpJP_alynr6wH-y5M9SwsKtUUeAxh9uX1Aor_H67g/viewform?embedded=true" width="640" height="1439" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<!--
+      <h1 class="w3-wide">CAN YOU COME?</h1>
+      <p>We really hope you can make it.</p>
+      <form>
+        <input class="w3-input w3-border" type="text" placeholder="Name(s)" name="name">
+      </form>
+      <p><i>Sincerely, John & Jane</i></p>
+      <div class="w3-row">
+        <div class="w3-half">
+          <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-green">Going</button>
+        </div>
+        <div class="w3-half">
+          <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-red">Can't come</button>
+        </div>-->
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- RSVP modal

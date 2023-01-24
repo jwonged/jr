@@ -12,7 +12,7 @@
 <script src="pw.js" async defer></script>
 
 <style>
-body,h1,h2{font-family: "Raleway", sans-serif}
+body,h1,h2, h3{font-family: "Raleway", sans-serif}
 body, html {height: 100%}
 p {line-height: 2}
 .bgimg {
@@ -37,7 +37,7 @@ p {line-height: 2}
     font-family: "Playfair Display";
 }
 .padtop{
-  margin-top: 64px;
+  margin-top: 58px;
 }
 @media (max-width: 600px) {
     .padtop {
@@ -78,8 +78,11 @@ table {
   <div class="overlay"></div>
   <div class="w3-display-middle w3-text-white w3-center">
     <h1 class="w3-jumbo jrfont">Joshua & Ruthanne</h1>
-    <h2>You are invited!</h2>
-    <h2 id="wed-date"><b>5 & 6 August 2023</b></h2>
+    <h3>You are invited!</h3>
+    <h3 id="wed-date">5 & 6 August 2023</h3><br>
+    <div class="w3-center">
+      <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-red w3-hover-opacity-off" style="padding:8px 60px">RSVP</button>
+    </div>
     <!--<p class="w3-center"><a href="#wedding" class="w3-button w3-dark-grey w3-round w3-padding-large w3-large">RSVP</a></p>
     -->
     </div>
@@ -96,38 +99,72 @@ table {
 
 </div>
 
-<!-- About -->
-<div class="w3-container w3-padding-64 jr-sec-div-color" id="us"><!-- w3-grayscale-min-->
+<!-- About
+<div class="w3-container w3-padding-64 jr-sec-div-color" id="us">
   <div class="w3-content">
     <h1 class="w3-center w3-text-grey"><b>J&R's Wedding</b></h1>
-    <!--<p class="w3-center"><a href="#wedding" class="w3-button w3-black w3-round w3-padding-large w3-large">Wedding Details</a></p>
-    -->
+   
     <div class="w3-row">
       <div class="w3-half w3-center">
-        <h2>Solemnization</h2>
+        <h2>Where</h2>
         <p id="when-line1">Solemnization – 1030am, 5 August 2023</p>
         <p> Reception & Dinner - 7pm, 6 August 2023</p>
       </div>
       <div class="w3-half w3-center">
-        <h2>Wedding Dinner</h2>
+        <h2>When</h2>
         <p id="">Somewhere, an address</p>
         <p>Somewhere, some address</p>
       </div>
     </div>
-    <!--    <img class="w3-round-large w3-grayscale-min" src="/w3images/wedding_location.jpg" style="width:100%;margin:64px 0">
+    <img class="w3-round-large w3-grayscale-min" src="/w3images/wedding_location.jpg" style="width:100%;margin:64px 0">
     <img class="w3-round w3-grayscale-min" src="/w3images/wedding_couple2.jpg" style="width:100%;margin:32px 0">
-    -->
+    
     <p class="w3-center"><i>Fun fact about r0ta: she once ate her headset. So now I have to buy her a new one. Any reccs?</i>
     </p><br>
   </div>
+</div>-->
+
+
+<!-- Working draft of section -->
+<div class="w3-container w3-padding-64 jr-sec-div-color" id="us"><!-- w3-grayscale-min-->
+  <div class="w3-content">
+
+    <div class="w3-center">
+      <img src="assets/vines-5.png" alt="image" width="150" height="auto" style="object-fit: contain;">
+    </div>
+
+    <div class="w3-row">
+      <div id="church-deets" class="w3-center">
+        <h1 class="w3-center w3-text-grey"><b>Solemnization</b></h1>
+        <p id="when-line1">1030am, 5 August 2023</p>
+        <p>Calvary Baptist Church, Singapore 123456</p><br>
+      </div>
+
+      <div id="din-deets" class="w3-center">
+        <h1 class="w3-center w3-text-grey"><b>Wedding Banquet</b></h1>
+        <p>7pm, 6 August 2023</p>
+        <p>St Regis Hotel, John Jacobs Ballroom, Singapore 654321</p>
+      </div>
+
+    </div>
+    <!--    <img class="w3-round-large w3-grayscale-min" src="/w3images/wedding_location.jpg" style="width:100%;margin:64px 0">
+    <img class="w3-round w3-grayscale-min" src="/w3images/wedding_couple2.jpg" style="width:100%;margin:32px 0">
+    
+    <p class="w3-center"><i>Fun fact about r0ta: she once ate her headset. So now I have to buy her a new one. Any reccs?</i>
+    </p>-->
+    <div class="w3-center">
+      <img src="assets/vines-4.png" alt="image" width="150" height="auto" style="object-fit: contain;">
+    </div>
+
+  </div>
+  
 </div>
 
 <!-- Countdown photo -->
 <div class="w3-display-container bgimg2">
   <div class="darker-overlay"></div>
   <div class="w3-display-middle w3-text-white w3-center">
-    <!--<h1 class="w3-jumbo">You Are Invited</h1><br>-->
-    <h1 class="w3-jumbo " id="countdown"></h2>
+    <h1 class="w3-jumbo" id="countdown"></h2>
   </div>
 </div>
 
@@ -159,8 +196,8 @@ table {
 <div class="w3-display-container bgimg3">
   <div class="darker-overlay"></div>
   <div class="w3-display-middle w3-text-white w3-center">
-    <h1 class="w3-jumbo">Save the date!</h1><br>
-    <p class="w3-xlarge">
+    <h1 class="w3-jumbo">Save the date!</h1>
+    <p class="w3-medium">
       <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">RSVP</button>
   
       <!-- smaller button leading to typeform
@@ -170,25 +207,6 @@ table {
   </div>
 </div>
 
-<!-- Wedding information 
-<div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min w3-center" id="wedding">
-  <div class="w3-content">
-    <h1 class="w3-text-grey"><b>THE WEDDING</b></h1>
-    <img class="w3-round-large w3-grayscale-min" src="/w3images/wedding_location.jpg" style="width:100%;margin:64px 0">
-    <div class="w3-row">
-      <div class="w3-half">
-        <h2>When</h2>
-        <p>Wedding Ceremony - 2:00pm</p>
-        <p>Reception & Dinner - 5:00pm</p>
-      </div>
-      <div class="w3-half">
-        <h2>Where</h2>
-        <p>Some place, an address</p>
-        <p>Some where, some address</p>
-      </div>
-    </div>
-  </div>
-</div>-->
 
 <!-- RSVP section -->
 <!--
@@ -206,7 +224,7 @@ table {
 <div id="id01" class="w3-modal">
   <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:900px">
     <div class="w3-container w3-white w3-center">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdrfhy0iPpJP_alynr6wH-y5M9SwsKtUUeAxh9uX1Aor_H67g/viewform?embedded=true" width="640" height="1439" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <iframe id="rsvp-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdrfhy0iPpJP_alynr6wH-y5M9SwsKtUUeAxh9uX1Aor_H67g/viewform?embedded=true" width="640" height="1439" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 <!--
       <h1 class="w3-wide">CAN YOU COME?</h1>
       <p>We really hope you can make it.</p>

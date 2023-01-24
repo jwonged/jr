@@ -53,15 +53,18 @@ function setWedDetails(codeword) {
 	if (codeword === "ironman") {
 		// Invited to both
 		document.getElementById("wed-date").innerHTML = "5 & 6 August 2023";
-		document.getElementById("rsvp-form").src = "https://m62atgq97h1.typeform.com/to/ssoKPCsQ";
+		document.getElementById("rsvp-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSeRoLTM8QEt5WcnHre_gAoA887KZkIzZ7ibyJTmsWiEBxcnXA/viewform?usp=sf_link";
+		
 	} else if (codeword === "wedding") {
 		// Invited to banquet only
 		document.getElementById("wed-date").innerHTML = "6 August 2023";
 		document.getElementById("church-deets").style.display = "none";
+		document.getElementById("rsvp-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSdrfhy0iPpJP_alynr6wH-y5M9SwsKtUUeAxh9uX1Aor_H67g/viewform?usp=sf_link";
 	} else if (codeword === "thanos") {
 		// Invited to church only
 		document.getElementById("wed-date").innerHTML = "5 August 2023";
 		document.getElementById("din-deets").style.display = "none";
+		document.getElementById("rsvp-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSek7SrmK713Hu5JKctDbtUowTdTm6gr7eoQkU2rOuDmj7DxSA/viewform?usp=sf_link";
 	}
 
 }

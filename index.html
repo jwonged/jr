@@ -48,6 +48,9 @@ p {line-height: 2}
     color:#000!important;
     background-color:#DCE6E9!important
 }
+.smaller-button-pad {
+  padding:4px 8px;
+}
 
 table {
   border: 1px solid black;
@@ -193,7 +196,7 @@ table {
 
 
 <!-- Countdown photo -->
-<div class="w3-display-container bgimg3">
+<div class="w3-display-container bgimg3" id="rsvp">
   <div class="darker-overlay"></div>
   <div class="w3-display-middle w3-text-white w3-center">
     <h1 class="w3-jumbo">Save the date!</h1>
@@ -222,9 +225,15 @@ table {
 </div>-->
 
 <div id="id01" class="w3-modal">
-  <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:900px">
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:16px;max-width:900px">
     <div class="w3-container w3-white w3-center">
-      <iframe id="rsvp-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdrfhy0iPpJP_alynr6wH-y5M9SwsKtUUeAxh9uX1Aor_H67g/viewform?embedded=true" width="640" height="1439" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <span onclick="document.getElementById('id01').style.display='none'"
+      class="w3-button smaller-button-pad w3-display-topright">&times;</span>
+      <iframe id="rsvp-form" src="" width="640" height="1439" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+    </div>
+  </div>
+</div>
 <!--
       <h1 class="w3-wide">CAN YOU COME?</h1>
       <p>We really hope you can make it.</p>
@@ -239,10 +248,6 @@ table {
         <div class="w3-half">
           <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-red">Can't come</button>
         </div>-->
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- RSVP modal
 <div id="id01" class="w3-modal">

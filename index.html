@@ -51,10 +51,33 @@ p {line-height: 2}
 .padtop{
   margin-top: 58px;
 }
+.show-when-mobile {
+      display: none
+    }
+.map-size {
+  width: 90%;
+  height: 70vh;
+}
 @media (max-width: 600px) {
     .padtop {
       margin-top: 0px;
     }
+    .bgimg2 {
+      min-height: 60%;
+      background-position: top;
+      background-size: cover;
+    }
+    .hide-when-mobile {
+      display: none;
+    }
+    .show-when-mobile {
+      display: block
+    }
+    .map-size {
+      width: 100%;
+      height: 90vh;
+    }
+    
 }
 .jr-sec-div-color{
     color:#000!important;
@@ -151,14 +174,14 @@ table {
       <div id="church-deets" class="w3-center">
         <h1 class="w3-center w3-text-grey"><b>Solemnization</b></h1>
         <p id="when-line1">1030am, 5 August 2023</p>
-        <p>Calvary Baptist Church, Singapore 123456</p>
+        <p>Calvary Baptist Church, Singapore 347592</p>
         <p>Dress code: Semi-formal</p><br>
       </div>
 
       <div id="din-deets" class="w3-center">
         <h1 class="w3-center w3-text-grey"><b>Wedding Banquet</b></h1>
         <p>7pm, 6 August 2023</p>
-        <p>St Regis Hotel, John Jacobs Ballroom, Singapore 654321</p>
+        <p>St Regis Hotel, John Jacobs Ballroom, Singapore 247911</p>
         <p>Dress code: Formal</p>
       </div>
 
@@ -186,7 +209,7 @@ table {
 <div class="w3-container w3-padding-64 jr-sec-div-color" id="location">
   <h1 class="w3-center w3-text-grey"><b>How to get there</b></h1>
   <div id="church-loc" class="w3-content">
-    <br><br>
+    <div class="hide-when-mobile"><br><br></div>
     <div class="w3-half w3-center">
       <p class="w3-xlarge"><b>Solemnization</b></p>
 
@@ -194,30 +217,29 @@ table {
       48 Wan Tho Avenue, Singapore, 347592</p><br>
 
       <p class="w3-large"><b>Nearest MRT/Subway stations</b></p>
-      <p>Potong Pasir MRT (NE10) <br>
-      Orchard MRT (NS22/TE14)</p>
+      <p>Potong Pasir MRT (NE10)</p>
     </div>
 
     <div class="w3-half w3-center">
+      <div class="show-when-mobile"><br></div>
       <div class="mapouter"><div class="gmap_canvas">
-        <iframe width="50%" height="50px" id="gmap_canvas" src="https://maps.google.com/maps?q=calvary%20baptist%20church&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        <iframe class="map-size"  width="50%" height="50px" id="gmap_canvas" src="https://maps.google.com/maps?q=calvary%20baptist%20church&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
         <a href="https://www.whatismyip-address.com/divi-discount/">divi discount</a><br>
         <style>.mapouter{position:relative;text-align:right;height:300px;width:100%;}</style><a href="https://www.embedgooglemap.net">google maps embed wordpress</a>
         <style>.gmap_canvas {overflow:hidden;background:none!important;height:30px;width:100%;}</style></div></div>
-
     </div>
   </div>
 
   <div id="din-loc" class="w3-content">
     <br><br>
-    <div class="w3-half w3-center">
+    <div class="w3-half w3-center  hide-when-mobile">
       <div class="mapouter"><div class="gmap_canvas">
-        <iframe width="100%" height="50%" id="gmap_canvas" src="https://maps.google.com/maps?q=St%20regis,%20singapor&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="" scrolling="no" marginheight="0" marginwidth=""></iframe>
+        <iframe class="map-size"  width="100%" height="50%" id="gmap_canvas" src="https://maps.google.com/maps?q=St%20regis,%20singapor&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="" scrolling="no" marginheight="0" marginwidth=""></iframe>
         <a href="https://www.whatismyip-address.com/divi-discount/">divi discount</a><br>
         <style>.mapouter{position:relative;text-align:right;height:500px;width:100%;}</style><a href="https://www.embedgooglemap.net">google maps embed wordpress</a>
         <style>.gmap_canvas {overflow:hidden;background:none!important;height:80%;width:100%;}</style></div></div>
-
     </div>
+
     <div class="w3-half w3-center">
       <p class="w3-xlarge"><b>Dinner Reception</b></p>
       <p>The St. Regis Singapore<br>
@@ -226,6 +248,14 @@ table {
       <p class="w3-large"><b>Nearest MRT/Subway stations</b></p>
       <p>Orchard Boulevard MRT (TE13) <br>
       Orchard MRT (NS22/TE14)</p>
+    </div>
+    <div class="w3-half w3-center  show-when-mobile">
+      <br>
+      <div class="mapouter"><div class="gmap_canvas">
+        <iframe class="map-size" width="100%" height="50%" id="gmap_canvas" src="https://maps.google.com/maps?q=St%20regis,%20singapor&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="" scrolling="no" marginheight="0" marginwidth=""></iframe>
+        <a href="https://www.whatismyip-address.com/divi-discount/">divi discount</a><br>
+        <style>.mapouter{position:relative;text-align:right;height:500px;width:100%;}</style><a href="https://www.embedgooglemap.net">google maps embed wordpress</a>
+        <style>.gmap_canvas {overflow:hidden;background:none!important;height:80%;width:100%;}</style></div></div>
     </div>
 
     

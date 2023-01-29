@@ -20,8 +20,20 @@ p {line-height: 2}
   background-position: top;
   background-size: cover;
 }
-.bgimg2, .bgimg3 {
+.bgimg2 {
+  min-height: 45%;
+  background-position: top;
+  background-size: cover;
+}
+
+.bgimg3 {
   min-height: 60%;
+  background-position: top;
+  background-size: cover;
+}
+
+.bgimg4 {
+  min-height: 90%;
   background-position: top;
   background-size: cover;
 }
@@ -61,12 +73,13 @@ table {
 .bgimg {background-image: url("assets/jwrs.jpeg")}
 .bgimg2 {background-image: url("assets/iceru.jpeg")}
 .bgimg3 {background-image: url("assets/ruthaice2.png")}
+.bgimg4 {background-image: url("assets/couple/couple-1.jpeg")}
 
 </style>
 </head>
 <body>
 
-<!--Yes, you can find out which password to use from here if you really want to. Stop trying to read my code. -->
+<!--Yes, you can find out which password to use from here if you really want to. Stop trying to read my code.-->
 <div id="password-overlay" class="password-overlay">
     <form>
       <input type="codeword" id="codeword" name="codeword">
@@ -86,8 +99,6 @@ table {
     <div class="w3-center">
       <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-red w3-hover-opacity-off" style="padding:8px 60px">RSVP</button>
     </div>
-    <!--<p class="w3-center"><a href="#wedding" class="w3-button w3-dark-grey w3-round w3-padding-large w3-large">RSVP</a></p>
-    -->
     </div>
 </header>
 
@@ -128,7 +139,7 @@ table {
 </div>-->
 
 
-<!-- Working draft of section -->
+<!-- Wedding details -->
 <div class="w3-container w3-padding-64 jr-sec-div-color" id="us"><!-- w3-grayscale-min-->
   <div class="w3-content">
 
@@ -140,19 +151,19 @@ table {
       <div id="church-deets" class="w3-center">
         <h1 class="w3-center w3-text-grey"><b>Solemnization</b></h1>
         <p id="when-line1">1030am, 5 August 2023</p>
-        <p>Calvary Baptist Church, Singapore 123456</p><br>
+        <p>Calvary Baptist Church, Singapore 123456</p>
+        <p>Dress code: Semi-formal</p><br>
       </div>
 
       <div id="din-deets" class="w3-center">
         <h1 class="w3-center w3-text-grey"><b>Wedding Banquet</b></h1>
         <p>7pm, 6 August 2023</p>
         <p>St Regis Hotel, John Jacobs Ballroom, Singapore 654321</p>
+        <p>Dress code: Formal</p>
       </div>
 
     </div>
-    <!--    <img class="w3-round-large w3-grayscale-min" src="/w3images/wedding_location.jpg" style="width:100%;margin:64px 0">
-    <img class="w3-round w3-grayscale-min" src="/w3images/wedding_couple2.jpg" style="width:100%;margin:32px 0">
-    
+    <!--
     <p class="w3-center"><i>Fun fact about r0ta: she once ate her headset. So now I have to buy her a new one. Any reccs?</i>
     </p>-->
     <div class="w3-center">
@@ -165,17 +176,80 @@ table {
 
 <!-- Countdown photo -->
 <div class="w3-display-container bgimg2">
-  <div class="darker-overlay"></div>
+  <!--<div class="darker-overlay"></div>-->
   <div class="w3-display-middle w3-text-white w3-center">
     <h1 class="w3-jumbo" id="countdown"></h2>
   </div>
+</div>
+
+<!--Location details and map-->
+<div class="w3-container w3-padding-64 jr-sec-div-color" id="location">
+  <h1 class="w3-center w3-text-grey"><b>How to get there</b></h1>
+  <div id="church-loc" class="w3-content">
+    <br><br>
+    <div class="w3-half w3-center">
+      <p class="w3-xlarge"><b>Solemnization</b></p>
+
+      <p>Calvary Baptist Church<br>
+      48 Wan Tho Avenue, Singapore, 347592</p><br>
+
+      <p class="w3-large"><b>Nearest MRT/Subway stations</b></p>
+      <p>Potong Pasir MRT (NE10) <br>
+      Orchard MRT (NS22/TE14)</p>
+    </div>
+
+    <div class="w3-half w3-center">
+      <div class="mapouter"><div class="gmap_canvas">
+        <iframe width="50%" height="50px" id="gmap_canvas" src="https://maps.google.com/maps?q=calvary%20baptist%20church&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        <a href="https://www.whatismyip-address.com/divi-discount/">divi discount</a><br>
+        <style>.mapouter{position:relative;text-align:right;height:300px;width:100%;}</style><a href="https://www.embedgooglemap.net">google maps embed wordpress</a>
+        <style>.gmap_canvas {overflow:hidden;background:none!important;height:30px;width:100%;}</style></div></div>
+
+    </div>
+  </div>
+
+  <div id="din-loc" class="w3-content">
+    <br><br>
+    <div class="w3-half w3-center">
+      <div class="mapouter"><div class="gmap_canvas">
+        <iframe width="100%" height="50%" id="gmap_canvas" src="https://maps.google.com/maps?q=St%20regis,%20singapor&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="" scrolling="no" marginheight="0" marginwidth=""></iframe>
+        <a href="https://www.whatismyip-address.com/divi-discount/">divi discount</a><br>
+        <style>.mapouter{position:relative;text-align:right;height:500px;width:100%;}</style><a href="https://www.embedgooglemap.net">google maps embed wordpress</a>
+        <style>.gmap_canvas {overflow:hidden;background:none!important;height:80%;width:100%;}</style></div></div>
+
+    </div>
+    <div class="w3-half w3-center">
+      <p class="w3-xlarge"><b>Dinner Reception</b></p>
+      <p>The St. Regis Singapore<br>
+      29 Tanglin Road, Singapore, 247911</p><br>
+
+      <p class="w3-large"><b>Nearest MRT/Subway stations</b></p>
+      <p>Orchard Boulevard MRT (TE13) <br>
+      Orchard MRT (NS22/TE14)</p>
+    </div>
+
+    
+  </div>
+</div>
+
+
+<!-- Middle photo -->
+<div class="w3-display-container bgimg4">
+  <div class="w3-display-middle w3-text-white w3-center">
+    
+    <h1 class="w3-jumbo">Hope you can make it!</h2>
+  </div>
+  <div class="darker-overlay"></div>
 </div>
 
 
 <!-- Game! -->
 <div class="w3-container w3-padding-64 jr-sec-div-color" id="game">
   <div class="w3-content">
-    <h1 class="w3-center w3-text-grey"><b>Who'll win?</b></h1>
+
+    <!--<div class="w3-half w3-center">-->
+
+    <h1 class="w3-center w3-text-grey"><b>Click to play</b></h1>
       <div class="board w3-center" id="board">
          <div class="cell" data-cell></div>
          <div class="cell" data-cell></div>
@@ -191,11 +265,18 @@ table {
          <div id="winningMessageText">oh</div>
          <button id="restartButton">Restart</button>
        </div>
+      </div>
+
+    <!--cbox chatbox
+    <div class="w3-half w3-center">
+      <iframe src="https://www3.cbox.ws/box/?boxid=3525150&boxtag=kAaias" width="50%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>	
+    </div>-->
+
   </div>
 </div>
 
 
-<!-- Countdown photo -->
+<!-- Save the date photo -->
 <div class="w3-display-container bgimg3" id="rsvp">
   <div class="darker-overlay"></div>
   <div class="w3-display-middle w3-text-white w3-center">
@@ -209,6 +290,7 @@ table {
     </p>
   </div>
 </div>
+
 
 
 <!-- RSVP section -->

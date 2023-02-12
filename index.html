@@ -1,6 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <script>
+    window.Papercups = {
+      config: {
+        accountId: 'a30781a4-1716-4aea-aa53-19e8c27616e7',
+        title: 'Joshua & Ruthanne',
+        subtitle: 'Talk to us below 😊',
+        newMessagePlaceholder: 'Start typing...',
+        primaryColor: '#484848',
+        // Optionally pass in a default greeting
+        //greeting: 'Hi there! How can I help you?',
+        // Optionally pass in metadata to identify the customer
+        /*customer: {
+          name: 'Test User',
+          email: 'test@test.com',
+          external_id: '123',
+          metadata: {version: 1, plan: 'premium'}, 
+        },*/
+        // Optionally specify the base URL
+        baseUrl: 'https://app.papercups.io',
+        requireEmailUpfront: true,
+        showAgentAvailability: false,
+      },
+    };
+  </script>
+  <script
+    type="text/javascript"
+    async
+    defer
+    src="https://app.papercups.io/widget.js"></script>
+  
+
+
 <title>Joshua & Ruthanne</title>
 <link rel="icon" type="image/x-icon" href="assets/jrletters.png">
 <meta charset="UTF-8">
@@ -8,6 +41,7 @@
 <link rel="stylesheet" href="main-styling.css">
 <link rel="stylesheet" href="custom-styling.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
 
 <script src="pw.js" async defer></script>
 
@@ -99,6 +133,9 @@ table {
 .bgimg4 {background-image: url("assets/couple/couple-1.jpeg")}
 
 </style>
+
+
+
 </head>
 <body>
 
@@ -385,7 +422,8 @@ table {
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
-  <p>Powered by <a href="https://www.hypotenuse.ai" title="W3.CSS" target="_blank" class="w3-hover-text-green">Hypotenuse AI</a></p>
+  <p>Some text here might have been written by <a href="https://www.hypotenuse.ai" title="W3.CSS" target="_blank" class="w3-hover-text-green">Hypotenuse AI</a>
+  <br><a href="hidden.html" title="W3.CSS" target="_blank" class="w3-hover-text-green">.</a></p>
 </footer>
 <div class="w3-hide-small" style="margin-bottom:32px"> </div>
 

@@ -114,7 +114,7 @@ function handleCellClick(e) {
 	const currentClass = isPlayer_O_Turn ? PLAYER_O_CLASS : PLAYER_X_CLASS
 	placeMark(cell, currentClass)
 	if (checkWin(currentClass)) {
-		endGame(false)
+		endGame(false, isPlayer_O_Turn)//to change
 	} else if (isDraw()) {
 		endGame(true)
 	} else {
@@ -124,11 +124,11 @@ function handleCellClick(e) {
 }
 
 
-function endGame(draw) {
+function endGame(draw, isPlayer_0_Turn) {
     if (draw) {
         winningMessageTextElement.innerText = "Draw!"
     } else {
-        winningMessageTextElement.innerText = `${isPlayer_0_Turn ? "J" : "R"} wins!`
+        winningMessageTextElement.innerText = `${isPlayer_0_Turn ? "Ruthanne still" : "Ruthanne"} wins!`
     }
     winningMessageElement.classList.add('show')
 }

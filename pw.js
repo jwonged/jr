@@ -38,9 +38,9 @@ input.addEventListener("keypress", function(event) {
 
 // Check which part of wed they are invited for
 function checkPassword() {
-	var codeword = document.getElementById("codeword").value;
+	var codeword = document.getElementById("codeword").value.toLowerCase();
 	var result = document.getElementById("result");
-	if (codeword === "ironman" || codeword === "wedding" || codeword === "thanos") {
+	if (codeword === "ironman" || codeword === "chimera" || codeword === "wedding" || codeword === "thanos") {
 	  document.getElementById("password-overlay").style.display = "none";
 	  setWedDetails(codeword);
 	} else {
@@ -50,7 +50,7 @@ function checkPassword() {
   }
 
 function setWedDetails(codeword) {
-	if (codeword === "ironman") {
+	if (codeword === "ironman" || codeword === "chimera") {
 		// Invited to both
 		document.getElementById("wed-date").innerHTML = "5 & 6 August 2023";
 		document.getElementById("rsvp-form").src = "https://docs.google.com/forms/d/e/1FAIpQLSeRoLTM8QEt5WcnHre_gAoA887KZkIzZ7ibyJTmsWiEBxcnXA/viewform?usp=sf_link";
